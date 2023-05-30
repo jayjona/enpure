@@ -2,7 +2,6 @@ package main
 
 import (
 	"embed"
-	"io"
 	"io/fs"
 	"io/ioutil"
 	"log"
@@ -10,7 +9,6 @@ import (
 	"os/exec"
 
 	"github.com/aws/aws-lambda-go/events"
-	"github.com/aws/aws-lambda-go/lambda"
 )
 
 //go:embed myExecutable/enpure
