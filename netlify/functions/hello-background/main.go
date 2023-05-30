@@ -75,7 +75,7 @@ func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResp
 		return nil, err
 	}
 
-	// Build the response with the processing message
+	// Build the response with the processing messages
 	response := &events.APIGatewayProxyResponse{
 		StatusCode:      200,
 		Headers:         map[string]string{"Content-Type": "text/plain"},
