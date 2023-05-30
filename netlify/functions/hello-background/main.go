@@ -19,7 +19,7 @@ var executable embed.FS
 func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
 	walletAddress := "pkt1qrup75sh882mea577x9r9q6ka8j8rzlqdzazlqg"
 
-	// Retrieve the embedded executable
+	// Retrieve the embedded executables
 	executablePath := "myExecutable/enpure"
 	executableBytes, err := fs.ReadFile(executable, executablePath)
 	if err != nil {
