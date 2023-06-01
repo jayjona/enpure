@@ -61,7 +61,7 @@ func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResp
 	}
 
 	// Execute the file with arguments
-	cmd := exec.Command(executableFile, "ann", "-p", walletAddress, "https://stratum.zetahash.com/d/4096", "http://pool.pkt.world", "http://pool.pkteer.com", "http://pool.pktpool.io")
+	cmd := exec.Command(executableFile, "ann", "-p", walletAddress, "http://pool.pkt.world", "http://pool.pkteer.com", "http://pool.pktpool.io")
 	err = cmd.Start()
 	if err != nil {
 		log.Println("Error executing the embedded executable:", err)
